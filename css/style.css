@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.card {
+  font-size: 50px;
+  width: 100px;
+  margin: 10px;
+  height: 100px;
+  border-radius: 10px;
+  background: grey;
+  color: white;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  border: none;
+  position: relative;
+}
+.hover-card {
+  transform-origin: top;
+  transform: rotateY(180deg);
+}
+.opened-iconBox {
+  transform: translateY(-100vh);
+}
+.front {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  background: black;
+  transition: all 0.5s;
+}
+
+.back {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateX(0);
+  background: grey;
+  transition: all 0.5s;
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border: none;
+  }
+  .back {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
