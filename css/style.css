@@ -4,12 +4,19 @@ body {
   align-items: center;
   justify-content: center;
 }
+.game-name {
+  margin: 20px auto;
+}
+.game-title {
+  color: red;
+}
 
 #container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  max-width: 500px;
   width: 100%;
 }
 .card {
@@ -66,11 +73,41 @@ body {
 }
 
 @media (max-width: 650px) {
+  #container {
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20%;
+  }
   .card {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     font-size: 20px;
     border: none;
+  }
+  .back {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  #container {
+    width: 100%;
+    margin-top: 20%;
+  }
+  .card {
+    width: 18%;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card p {
+    margin: 0;
+    padding: 0;
   }
   .back {
     font-size: 10px;
