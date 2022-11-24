@@ -1,5 +1,6 @@
 let container = document.querySelector("#container");
 let replay = document.querySelector(".replay");
+let game_title = document.querySelector(".game-title");
 replay.style.display = "none";
 const cards_length = 16;
 const cards = [];
@@ -62,8 +63,9 @@ icons.forEach((item) => {
           tempt.classList.add("opened-iconBox");
           cardEl.classList.add("opened-iconBox");
           if (winCount === 8) {
-            alert("you win");
+            alert("you win !");
             replay.style.display = "block";
+            game_title.style.display = "none";
           }
         }, 1000);
       }
